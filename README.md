@@ -1,6 +1,8 @@
 # SnakeGame
 Have you played snake game with two players at the same time!? Well this is an usual arcade game with 2-player mode.
 
+![](images/screenshot.png)
+
 ## Controls
  ###### Player 1
  - UP - up arrow
