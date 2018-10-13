@@ -8,15 +8,15 @@ var killPoint = 20;
 
 
 function setup(){
-    createCanvas(600,500);
-    
+    var canvas = createCanvas(600,500);
+    canvas.parent('game');
     snakep1 = new Snake();
     snakep1.setColor(255,0,238);
-    
+
     snakep2 = new Snake();
     snakep2.setPlayerInfo(0,100,1,0);
     snakep2.setColor(0,97,225);
-    
+
     food = new Food();
     food.create();
     frameRate(15);
@@ -28,7 +28,7 @@ function draw(){
     food.show();
     snakep1.show();
     snakep2.show();
-    
+
     if(snakep1.eat(food)){
         food.create();
         p1 = p1+10;
@@ -64,7 +64,7 @@ function keyPressed(){
     else if(keyCode === RIGHT_ARROW){
         snakep1.changeDirection(1,0);
     }
-    
+
     if(key == 'W'){
         snakep2.changeDirection(0,-1);
     }
@@ -77,7 +77,7 @@ function keyPressed(){
     else if(key == 'D'){
         snakep2.changeDirection(1,0);
     }
-    
+
     if(snakep1.dead && keyCode === ENTER){
         snakep1 = new Snake();
         snakep1.setColor(255,0,238);
